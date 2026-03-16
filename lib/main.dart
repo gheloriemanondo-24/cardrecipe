@@ -50,7 +50,7 @@ class RecipePage extends StatelessWidget {
                   ),
                 ),
 
-                // TITLEeeeeeeee
+                // TITLE
                 const Padding(
                   padding: EdgeInsets.all(16),
                   child: Text(
