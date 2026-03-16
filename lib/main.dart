@@ -108,6 +108,62 @@ class RecipePage extends StatelessWidget {
                 ),
 
                 const SizedBox(height: 25),
+
+                // INGREDIENTS
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  child: Text(
+                    "Ingredients",
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
+                ),
+
+                const SizedBox(height: 10),
+
+                // HEART ICON
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Expanded(
+                        child: DefaultTextStyle(
+                          style: const TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            letterSpacing: 2,
+                            color: Colors.black87,
+                          ),
+                          child: const Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text("• 1 whole chicken"),
+                              Text("• Garlic"),
+                              Text("• Onion"),
+                              Text("• Bay Leaves"),
+                              Text("• Cooking Oil"),
+                              Text("• 1/2 Cup soy sauce"),
+                              Text("• 1/4 Cup vinegar"),
+                              Text("• 1 Cup water"),
+                            ],
+                          ),
+                        ),
+                      ),
+
+                      Container(
+                        decoration: const BoxDecoration(
+                          color: Colors.white,
+                          shape: BoxShape.circle,
+                          boxShadow: [BoxShadow(color: Colors.black26)],
+                        ),
+                        child: const Padding(
+                          padding: EdgeInsets.all(8),
+                          child: Icon(Icons.favorite, color: Colors.black),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
