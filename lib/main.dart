@@ -107,8 +107,9 @@ class RecipePage extends StatelessWidget {
                   ),
                 ),
 
-                const SizedBox(height: 25),
+                const SizedBox(height: 90),
 
+                // PART 3
                 // INGREDIENTS
                 const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 20),
