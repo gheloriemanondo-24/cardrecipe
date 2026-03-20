@@ -37,7 +37,7 @@ class RecipePage extends StatelessWidget {
               children: [
                 // PART 1 - BG IMAGE & TITLE
                 Container(
-                  height: 190,
+                  height: 200,
                   width: double.infinity,
                   decoration: const BoxDecoration(
                     borderRadius: BorderRadius.vertical(
@@ -56,58 +56,90 @@ class RecipePage extends StatelessWidget {
                   child: Text(
                     "Filipino Style: Chicken Adobo",
                     style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 28,
                       letterSpacing: 3,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
 
-                const SizedBox(height: 10),
+                const SizedBox(height: 1),
 
-                // PART 2 - ICONS
+                // PART 2 - ICONS (UPDATED DESIGN)
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 9),
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
-                        children: const [
-                          Icon(
-                            Icons.timer,
-                            color: Color.fromARGB(255, 32, 41, 46),
+                      // LEFT SIDE (Prep + Cook)
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Container(
+                                padding: const EdgeInsets.all(8),
+                                decoration: BoxDecoration(
+                                  color: Colors.blueGrey,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: const Icon(
+                                  Icons.timer,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              const SizedBox(width: 10),
+                              const Text("Prep: 15 min"),
+                            ],
                           ),
-                          SizedBox(width: 5),
-                          Text("Prep: 15 min"),
+
+                          const SizedBox(height: 15),
+
+                          Row(
+                            children: [
+                              Container(
+                                padding: const EdgeInsets.all(8),
+                                decoration: BoxDecoration(
+                                  color: Colors.blueGrey,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: const Icon(
+                                  Icons.star,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              const SizedBox(width: 10),
+                              const Text("Cook: 45 min"),
+                            ],
+                          ),
                         ],
                       ),
 
-                      Row(
-                        children: const [
-                          Icon(
-                            Icons.star,
-                            color: Color.fromARGB(255, 32, 41, 46),
-                          ),
-                          SizedBox(width: 5),
-                          Text("Cook: 45 min"),
-                        ],
-                      ),
+                      const Spacer(),
 
+                      // RIGHT SIDE (Difficulty)
                       Row(
-                        children: const [
-                          Icon(
-                            Icons.restaurant_menu,
-                            color: Color.fromARGB(255, 32, 41, 46),
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.all(8),
+                            decoration: BoxDecoration(
+                              color: Colors.blueGrey,
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: const Icon(
+                              Icons.restaurant_menu,
+                              color: Colors.white,
+                            ),
                           ),
-                          SizedBox(width: 5),
-                          Text("Difficulty: Easy"),
+                          const SizedBox(width: 10),
+                          const Text("Difficulty: Easy"),
                         ],
                       ),
                     ],
                   ),
                 ),
 
-                const SizedBox(height: 90),
+                const SizedBox(height: 10),
 
                 // PART 3
                 // INGREDIENTS
@@ -115,7 +147,11 @@ class RecipePage extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 20),
                   child: Text(
                     "Ingredients",
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontSize: 27,
+                      letterSpacing: 3,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
 
@@ -130,7 +166,7 @@ class RecipePage extends StatelessWidget {
                       Expanded(
                         child: DefaultTextStyle(
                           style: const TextStyle(
-                            fontSize: 18,
+                            fontSize: 19,
                             fontWeight: FontWeight.w500,
                             letterSpacing: 2,
                             color: Colors.black87,
